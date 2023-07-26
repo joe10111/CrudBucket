@@ -1,0 +1,22 @@
+﻿@model Video
+
+<h1>Video Detials</h1>
+
+@if(Video.Equals != null)
+{
+<p>Title: @Model.Title</p>
+<p>Title: @Model.Author</p>
+
+
+    <a href="/Video/@Model.Id/Edit"><button>Edit</button></a>
+
+    <form action="/Video/Delete/@Model.Id" method="post">
+        <button type="submit">Delete</button>
+    </form>
+}
+else
+{
+    <p>No Data in Database</p>
+}
+
+<a href="/Video"><button>Back</button></a>

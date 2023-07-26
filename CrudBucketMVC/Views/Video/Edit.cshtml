@@ -1,0 +1,15 @@
+﻿@model CrudBucketMVC.Models.Video
+
+<h1>Edit Video</h1>
+
+<form method="post" action="/video/@Model.Id">
+    <div class="form-group">
+        <label for="Title">Title:</label>
+        <input type="text" id="Title" name="Title" value="@Model.Title" />
+    </div>
+    <div class="form-group">
+        <label for="Author">Author:</label>
+        <input type="text" id="Author" name="Author" value="@Model.Author" />
+    </div>
+    <button type="submit">Update Movie</button>
+</form>

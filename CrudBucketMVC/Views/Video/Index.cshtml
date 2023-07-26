@@ -1,0 +1,21 @@
+﻿@model IEnumerable<CrudBucketMVC.Models.Video>
+
+<p>Videos Page</p>
+
+<a href="/Video/new"><button>Make New Video</button></a>
+<br></br>
+@if (Model != null && Model.Any())
+{
+    @foreach (var video in Model)
+    {
+        <div class="video-info">
+            <a href="/video/@video.Id/"><p>Title: @video.Title, Author: @video.Author</p> </a>
+        </div>
+    }
+}
+else 
+{
+    <p>No Data from database</p>
+}
+
+<a href="../"><button>Back</button></a>
